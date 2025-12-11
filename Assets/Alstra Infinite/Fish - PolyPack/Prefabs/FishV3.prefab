@@ -18,6 +18,8 @@ GameObject:
   - component: {fileID: 5329695119622370004}
   - component: {fileID: -3385260486140505672}
   - component: {fileID: 3770089861140303371}
+  - component: {fileID: 7496644501441559142}
+  - component: {fileID: 7768530947810453048}
   m_Layer: 0
   m_Name: FishV3
   m_TagString: Fish
@@ -212,3 +214,32 @@ MonoBehaviour:
   playerObject: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
   fleeSpeed: 5
   fleeDistance: 10
+--- !u!114 &7496644501441559142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2206852426022253465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c915673ef2c450b9a754fe4838f066, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  center: {x: 0, y: 0, z: 0}
+  boundsSize: {x: 40, y: 40, z: 40}
+  avoidStrength: 20
+--- !u!114 &7768530947810453048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2206852426022253465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a284255a4429441f8f162e7724c5751, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  avoidDistance: 2
+  avoidStrength: 20
