@@ -1,0 +1,55 @@
+{
+    "version": 1,
+    "name": "XRControls",
+    "maps": [
+        {
+            "name": "XR",
+            "id": "2bab7fd0-d30a-4fcf-ba9b-af6da71916af",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Button",
+                    "id": "60addb28-7b25-46f1-918b-dca310bbb1ab",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Turn",
+                    "type": "Button",
+                    "id": "bff022ac-d1b0-440d-8a6b-9d45e05ba142",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "921f2962-ada8-4573-ba4e-ed40a8e202cc",
+                    "path": "<QuestTouchPlusController>{LeftHand}/thumbstickTouched",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "458accfe-01f5-434b-af2c-81610d5949d2",
+                    "path": "<QuestTouchPlusController>{RightHand}/thumbstickTouched",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

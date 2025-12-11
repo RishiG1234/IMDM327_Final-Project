@@ -4,50 +4,28 @@ using UnityEngine.InputSystem;
 public class SharkMovement : MonoBehaviour
 {
     [Header("Movement")]
-    public float swimSpeed = 3f;
-    public float boostSpeed = 6f;
+    public float swimSpeed = 4f;
     public float turnSpeed = 60f;
 
-    [Header("Input")]
-    public InputActionProperty moveAction;   // Left joystick
-    public InputActionProperty boostAction;  // A/X button (optional)
+    [Header("Input Actions")]
+    public InputActionProperty moveAction;
+    public InputActionProperty turnAction;
 
-    private Transform head;     // From XR Origin Camera
-
-    void Start()
-    {
-        // Find the VR camera (the direction we swim in)
-        head = Camera.main.transform;
-    }
+    [Header("References")]
+    public Transform cameraTransform;
 
     void Update()
     {
-        SwimMovement();
-        TurnMovement();
-    }
+        Vector2 move = moveAction.action.ReadValue<Vector2>();
+        Vector2 turn = turnAction.action.ReadValue<Vector2>();
 
-    void SwimMovement()
-    {
-        Vector2 moveInput = moveAction.action.ReadValue<Vector2>();
+        // Forward swimming
+        Vector3 forward = cameraTransform.forward;
+        forward.y = 0; // no vertical movement
 
-        // Forward swimming: use vertical axis of joystick
-        float forward = moveInput.y;
+        transform.position += forward * move.y * swimSpeed * Time.deltaTime;
 
-        float speed = boostAction.action.IsPressed() ? boostSpeed : swimSpeed;
-
-        Vector3 direction = head.forward;
-        direction.y = 0; // Prevent swimming up/down accidentally
-        direction.Normalize();
-
-        transform.position += direction * forward * speed * Time.deltaTime;
-    }
-
-    void TurnMovement()
-    {
-        Vector2 moveInput = moveAction.action.ReadValue<Vector2>();
-
-        float turn = moveInput.x;
-
-        transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
+        // Rotation (yaw)
+        transform.Rotate(0, turn.x * turnSpeed * Time.deltaTime, 0);
     }
 }
