@@ -197,6 +197,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 433975294}
+  - component: {fileID: 433975295}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -219,6 +220,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &433975295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433975293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 539547d16deb24c60abdededa9fa86ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHunger: 100
+  hungerDrainRate: 1
+  hunger: 100
+  hungerFill: {fileID: 0}
+  scoreText: {fileID: 0}
+  winScreen: {fileID: 0}
+  loseScreen: {fileID: 0}
+  totalFish: 100
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,8 +436,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 2206852426022253465, guid: de500f6b90f89bc4c87a6585b2dea01a, type: 3}
-  radius: 0
-  number: 0
+  radius: 5
+  number: 100
 --- !u!4 &1392991686
 Transform:
   m_ObjectHideFlags: 0
@@ -488,6 +509,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1571212926}
   - component: {fileID: 1571212925}
+  - component: {fileID: 1571212927}
   m_Layer: 0
   m_Name: Mouth Zone
   m_TagString: Untagged
@@ -531,6 +553,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 219386341}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1571212927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571212924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ba003fff0af94e728e516bfa5f01a81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 433975295}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

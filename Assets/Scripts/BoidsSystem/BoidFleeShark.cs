@@ -5,34 +5,33 @@ using UnityEngine;
 [RequireComponent(typeof(Boid))]
 public class BoidFleeShark : MonoBehaviour
 {
-    public Transform shark;
-    public float fleeRadius = 5f;
-    public float fleeStrength = 10f;
+    [Header("References")]
+    public GameObject sharkObject;   // Assign the SHARK GameObject here
+    public GameObject playerObject;  // Assign the PLAYER GameObject here
 
-    private Boid boid;
+    [Header("Settings")]
+    public float fleeSpeed = 5f;
+    public float fleeDistance = 10f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private Transform shark;
+    private Transform player;
+
     void Start()
     {
-        boid = GetComponent<Boid>();
-        if (shark == null)
-        {
-            shark = GameObject.FindGameObjectWithTag("Player").transform;
-        }
+        // Cache transforms after assignment
+        shark = sharkObject.transform;
+        player = playerObject.transform;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (shark == null) return;
+        // If the shark is close, flee
+        float distance = Vector3.Distance(shark.position, transform.position);
 
-        Vector3 diff = transform.position - shark.position;
-        float dist = diff.magnitude;
-
-        if (dist < fleeRadius)
+        if (distance < fleeDistance)
         {
-            Vector3 fleeForce = diff.normalized * (fleeStrength / Mathf.Max(dist, 0.1f));
-            boid.velocity += fleeForce * Time.deltaTime;
+            Vector3 awayFromShark = transform.position - shark.position;
+            transform.position += awayFromShark.normalized * fleeSpeed * Time.deltaTime;
         }
     }
 }

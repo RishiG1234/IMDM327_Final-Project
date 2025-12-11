@@ -112,7 +112,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 7834934524071737294, guid: ae51ad94fa7d3764d957aa512d506d00, type: 3}
 --- !u!54 &-1116549735538207272
@@ -208,6 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9110ab129d5544b2c9ec424f9c81ca0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shark: {fileID: 0}
-  fleeRadius: 5
-  fleeStrength: 10
+  sharkObject: {fileID: 919132149155446097, guid: ca38d4485fce19f4aa0d3d7bdd8b6cf2, type: 3}
+  playerObject: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  fleeSpeed: 5
+  fleeDistance: 10
