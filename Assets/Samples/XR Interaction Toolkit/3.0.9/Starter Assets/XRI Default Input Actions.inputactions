@@ -1401,9 +1401,9 @@
             "actions": [
                 {
                     "name": "Position",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "c4990d70-7b8a-4ce1-b03c-da86716b8352",
-                    "expectedControlType": "Vector3",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -1524,6 +1524,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Boost",
+                    "type": "Button",
+                    "id": "09d48b9e-7171-46d8-b58f-51c66975ea20",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1931,6 +1940,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Thumbstick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d2373dfc-3ccc-4b52-a388-1a945ec6f1a4",
+                    "path": "<QuestTouchPlusController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Boost",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
