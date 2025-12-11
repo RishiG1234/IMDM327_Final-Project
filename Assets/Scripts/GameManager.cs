@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class GameManager : MonoBehaviour
 
     [Header("UI References")]
     public Image hungerFill;
-    public Text scoreText;
+    public TMP_Text scoreText;
     public GameObject winScreen;
     public GameObject loseScreen;
 
