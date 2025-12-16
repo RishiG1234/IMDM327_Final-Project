@@ -3,7 +3,7 @@ using UnityEngine;
 public class BoidBoundsBehavior : MonoBehaviour
 {
     public Vector3 center = Vector3.zero; 
-    public Vector3 boundsSize = new Vector3(50, 50, 50);
+    public Vector3 boundsSize = new Vector3(25, 25, 25);
     public float avoidStrength = 20f;
 
     private Boid boid;
