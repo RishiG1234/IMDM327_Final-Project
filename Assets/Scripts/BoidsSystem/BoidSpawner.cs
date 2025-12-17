@@ -7,7 +7,7 @@ public class BoidSpawner : MonoBehaviour
     public int number;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void SpawnBoid()
     {
         for (int i = 0; i < number; i++)
         {
@@ -16,8 +16,12 @@ public class BoidSpawner : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void ClearBoid()
     {
-        
+        GameObject[] boid = GameObject.FindGameObjectsWithTag("Fish");
+        foreach (GameObject b in boid)
+        {
+            Destroy(b);
+        }
     }
 }

@@ -22,6 +22,7 @@ public class SharkMovement : MonoBehaviour
         Vector2 turn = turnAction.action.ReadValue<Vector2>();
 
         bool boost = boostAction.action.IsPressed();
+
         float currentSpeed = boost ? boostSpeed : swimSpeed;
 
         // Forward swimming

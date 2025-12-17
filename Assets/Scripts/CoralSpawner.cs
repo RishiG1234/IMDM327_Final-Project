@@ -10,12 +10,7 @@ public class CoralSpawner : MonoBehaviour
     public float arenaHeight = 7.5f;
     public float arenaDepth = 15f;
 
-    void Start()
-    {
-        SpawnObstacles();
-    }
-
-    void SpawnObstacles()
+    public void SpawnObstacles()
     {
         for (int i = 0; i < obstacleCount; i++)
         {
@@ -38,6 +33,15 @@ public class CoralSpawner : MonoBehaviour
             // Randomize scale for variation
             float scale = Random.Range(0.8f, 2.5f);
             obj.transform.localScale = new Vector3(scale, scale, scale);
+        }
+    }
+
+    public void ClearObstacles()
+    {
+        GameObject[] corals = GameObject.FindGameObjectsWithTag("Obstacle");
+        foreach (GameObject coral in corals)
+        {
+            Destroy(coral);
         }
     }
 }
