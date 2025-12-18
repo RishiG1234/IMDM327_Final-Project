@@ -29,13 +29,10 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        Time.timeScale = 0f;
+        Time.timeScale = 0.001f;
         hunger = maxHunger;
         fishRemaining = totalFish;
         UpdateScore();
-
-        // Setup VR button clicks
-        SetupVRButtons();
     }
 
     private void Update()
@@ -67,14 +64,16 @@ public class GameManager : MonoBehaviour
 
     private void WinGame()
     {
-        Time.timeScale = 0f;
+        Time.timeScale = 0.001f;
         if (winScreen != null) winScreen.SetActive(true);
+        winScreen.transform.position = sharkPlayer.transform.position + new Vector3(0f, 0f, 10f);
     }
 
     private void LoseGame()
     {
-        Time.timeScale = 0f;
+        Time.timeScale = 0.001f;
         if (loseScreen != null) loseScreen.SetActive(true);
+        loseScreen.transform.position = sharkPlayer.transform.position + new Vector3(0f, 0f, 10f);
     }
 
     public void RestartGame()
@@ -105,8 +104,8 @@ public class GameManager : MonoBehaviour
             coralSpawner.SpawnObstacles();
         }
 
-        if (startScreen != null)
-            startScreen.SetActive(true);
+        // if (startScreen != null)
+        //     startScreen.SetActive(true);
     }
 
     public void StartGame()
@@ -115,7 +114,7 @@ public class GameManager : MonoBehaviour
 
         if (startScreen != null)
             startScreen.SetActive(false);
-
+            
         if (boidSpawner != null)
             boidSpawner.SpawnBoid();
 
@@ -123,25 +122,4 @@ public class GameManager : MonoBehaviour
             coralSpawner.SpawnObstacles();
     }
 
-    /// <summary>
-    /// Automatically assigns VR-compatible button listeners.
-    /// </summary>
-    private void SetupVRButtons()
-    {
-        Button[] buttons = FindObjectsByType<Button>(FindObjectsSortMode.None);
-        foreach (Button btn in buttons)
-        {
-            // Clear existing listeners to avoid duplicate calls
-            btn.onClick.RemoveAllListeners();
-
-            // Add the appropriate action based on button name (optional)
-            if (btn.name.ToLower().Contains("start"))
-                btn.onClick.AddListener(StartGame);
-            else if (btn.name.ToLower().Contains("restart"))
-                btn.onClick.AddListener(RestartGame);
-
-            // Debug logging
-            btn.onClick.AddListener(() => Debug.Log("Button clicked: " + btn.name));
-        }
-    }
 }
