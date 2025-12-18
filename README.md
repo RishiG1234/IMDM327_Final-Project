@@ -1,7 +1,7 @@
-Final Project - Hungry Hungry Shark
+**Final Project** - Hungry Hungry Shark
 
 
-Description - Hungry Hungry Shark is a first-person VR game experience that simulates the movements of sharks targeting schools of fish. 
+**Description** - Hungry Hungry Shark is a first-person VR game experience that simulates the movements of sharks targeting schools of fish. 
               The player controls the shark using the VR controllers to catch fish. 
               The goal of the game is to catch all the fish in the ocean environment before losing to the tides of hunger, 
               a unique health system where the shark’s HP (health points) gradually decays, 
@@ -9,14 +9,14 @@ Description - Hungry Hungry Shark is a first-person VR game experience that simu
               The game ends when all fish are caught, or if the hunger meter runs out.
               
 
-Video Demonstration - https://youtu.be/8WM8cVumdtk 
+**Video Demonstration** - https://youtu.be/8WM8cVumdtk
 
 
-Methodology - The primary technologies used in this project were the Unity Game Engine, Unity’s XR Interaction Toolkit, and the Meta Quest 3 headset. 
+**Methodology** - The primary technologies used in this project were the Unity Game Engine, Unity’s XR Interaction Toolkit, and the Meta Quest 3 headset. 
               Due to the Meta Quest 3’s incompatibility with Mac OS, numerous plugins needed to be installed beforehand, in order to make sure that building APK files to the headset was possible for testing purposes.
               
 
-Lessons/Achievements - Throughout this project, I faced many obstacles, which were lessons that helped me achieve what I truly wanted to: a VR game that builds off my boid system project. 
+**Lessons/Achievements** - Throughout this project, I faced many obstacles, which were lessons that helped me achieve what I truly wanted to: a VR game that builds off my boid system project. 
                       The first obstacle I had was connecting the headset to my Macbook, which required me to install a couple plugins so my computer could accept the headset as a device. 
                       This was an issue that plagued me on the final project in IMDM290 since that was my first time really working with VR headsets. 
                       After I got over that hurdle however, making the game was relatively easy. 
@@ -30,7 +30,7 @@ Lessons/Achievements - Throughout this project, I faced many obstacles, which we
 
 
 
-Audience Feedback - Feedback on my project was surprisingly positive, considering my project was quite simple 
+**Audience Feedback** - Feedback on my project was surprisingly positive, considering my project was quite simple 
                     and I knew I was going to be up against some heavy hitter projects from other students. 
                     People really seemed to enjoy the omnidirectional movement of the shark coupled with the game-like aspect of the project, which made me quite pleased. 
                     They also remarked that the movement of the player didn’t give them motion sickness, 
